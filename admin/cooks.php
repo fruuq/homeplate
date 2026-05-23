@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Cook Approvals';
 include __DIR__ . '/../includes/header.php';
 if (!$currentUser || $currentUser['role'] !== 'admin') { http_response_code(403); die('Access denied'); }
@@ -35,7 +35,7 @@ if (!$currentUser || $currentUser['role'] !== 'admin') { http_response_code(403)
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 async function loadCooks(status, btn) {
   document.querySelectorAll('.d-flex.gap-2 button').forEach(b => b.className = 'btn btn-outline-secondary btn-sm');
   btn.className = 'btn-hp btn btn-sm';

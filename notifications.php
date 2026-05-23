@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Notifications';
 include __DIR__ . '/includes/header.php';
 if (!$currentUser) { header('Location: /login.php'); exit; }
@@ -15,7 +15,7 @@ if (!$currentUser) { header('Location: /login.php'); exit; }
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 async function loadNotifications() {
   try {
     const data = await API.get('/api/notifications');

@@ -18,7 +18,7 @@ class DB
             $name = CRED_DB_NAME;
             $user = CRED_DB_USER;
             $pass = CRED_DB_PASSWORD;
-            $port = '3306';
+            $port = defined('CRED_DB_PORT') ? CRED_DB_PORT : '3306';
         } else {
             $host = $_ENV['DB_HOST']     ?? 'localhost';
             $name = $_ENV['DB_NAME']     ?? 'homeplate';

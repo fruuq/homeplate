@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Checkout';
 include __DIR__ . '/includes/header.php';
 if (!$currentUser) { header('Location: /login.php?next=/checkout.php'); exit; }
@@ -98,7 +98,7 @@ if (!$currentUser) { header('Location: /login.php?next=/checkout.php'); exit; }
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 function renderCart() {
   const items = Cart.get();
   const empty = document.getElementById('empty-cart');

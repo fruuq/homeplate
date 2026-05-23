@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'My Favorites';
 include __DIR__ . '/includes/header.php';
 if (!$currentUser) { header('Location: /login.php'); exit; }
@@ -12,7 +12,7 @@ if (!$currentUser) { header('Location: /login.php'); exit; }
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 async function loadFavorites() {
   const grid = document.getElementById('favs-grid');
   try {

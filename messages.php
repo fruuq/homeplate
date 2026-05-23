@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Messages';
 include __DIR__ . '/includes/header.php';
 if (!$currentUser) { header('Location: /login.php?next=/messages.php'); exit; }
@@ -44,7 +44,7 @@ $withId = (int)($_GET['with'] ?? 0);
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 const ME = <?= json_encode($currentUser['id']) ?>;
 let activePartnerId = <?= $withId ?: 'null' ?>;
 let pollTimer = null;

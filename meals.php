@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Browse Meals';
 include __DIR__ . '/includes/header.php';
 $initQ        = htmlspecialchars($_GET['q']        ?? '');
@@ -74,7 +74,7 @@ $initCategory = (int)($_GET['category'] ?? 0);
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 const CATS = [
   {id:1,name:'Breakfast',icon:'fa-sun'},{id:2,name:'Lunch',icon:'fa-utensils'},
   {id:3,name:'Dinner',icon:'fa-moon'},{id:4,name:'Snacks',icon:'fa-cookie'},

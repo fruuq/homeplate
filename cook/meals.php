@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Manage Meals';
 include __DIR__ . '/../includes/header.php';
 if (!$currentUser || $currentUser['role'] !== 'cook') {
@@ -82,7 +82,7 @@ if (!$currentUser || $currentUser['role'] !== 'cook') {
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 async function loadMeals() {
   const list = document.getElementById('meals-list');
   try {

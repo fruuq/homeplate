@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Order Detail';
 include __DIR__ . '/includes/header.php';
 if (!$currentUser) { header('Location: /login.php'); exit; }
@@ -16,7 +16,7 @@ if (!$orderId) { header('Location: /orders.php'); exit; }
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 const orderId = {$orderId};
 
 const statusSteps = ['pending','accepted','preparing','ready','out_for_delivery','delivered'];

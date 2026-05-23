@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Meal Detail';
 include __DIR__ . '/includes/header.php';
 $mealId = (int)($_GET['id'] ?? 0);
@@ -10,7 +10,7 @@ if (!$mealId) { header('Location: /meals.php'); exit; }
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 const mealId = {$mealId};
 
 async function loadMeal() {

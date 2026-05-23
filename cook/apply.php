@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Become a Cook';
 include __DIR__ . '/../includes/header.php';
 if (!$currentUser) { header('Location: /login.php?next=/cook/apply.php'); exit; }
@@ -64,7 +64,7 @@ if ($currentUser['role'] === 'cook') { header('Location: /cook/dashboard.php'); 
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 document.getElementById('apply-form').addEventListener('submit', async e => {
   e.preventDefault();
   const msg  = document.getElementById('form-msg');

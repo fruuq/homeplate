@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'User Management';
 include __DIR__ . '/../includes/header.php';
 if (!$currentUser || $currentUser['role'] !== 'admin') { http_response_code(403); die('Access denied'); }
@@ -57,7 +57,7 @@ if (!$currentUser || $currentUser['role'] !== 'admin') { http_response_code(403)
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 async function loadUsers() {
   const list = document.getElementById('users-list');
   list.innerHTML = '<div class="text-center py-5"><div class="spinner-border text-orange"></div></div>';

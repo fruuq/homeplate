@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Cook Profile';
 include __DIR__ . '/includes/header.php';
 $cookId = (int)($_GET['id'] ?? 0);
@@ -10,7 +10,7 @@ if (!$cookId) { header('Location: /meals.php'); exit; }
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 const cookId = {$cookId};
 
 async function loadCook() {

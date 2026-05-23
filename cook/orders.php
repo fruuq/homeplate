@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Received Orders';
 include __DIR__ . '/../includes/header.php';
 if (!$currentUser || $currentUser['role'] !== 'cook') { header('Location: /login.php'); exit; }
@@ -22,7 +22,7 @@ if (!$currentUser || $currentUser['role'] !== 'cook') { header('Location: /login
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 let currentStatus = '';
 
 function filterStatus(s, btn) {

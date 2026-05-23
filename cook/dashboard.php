@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Cook Dashboard';
 include __DIR__ . '/../includes/header.php';
 if (!$currentUser || $currentUser['role'] !== 'cook') {
@@ -37,7 +37,7 @@ if (!$currentUser || $currentUser['role'] !== 'cook') {
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 async function loadDashboard() {
   try {
     const d = await API.get('/api/cooks/dashboard');

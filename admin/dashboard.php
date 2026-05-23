@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Admin Dashboard';
 include __DIR__ . '/../includes/header.php';
 if (!$currentUser || $currentUser['role'] !== 'admin') {
@@ -50,7 +50,7 @@ if (!$currentUser || $currentUser['role'] !== 'admin') {
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 async function loadDashboard() {
   try {
     const d = await API.get('/api/admin/dashboard');

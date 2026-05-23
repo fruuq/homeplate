@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'Fresh Homemade Food Delivered';
 include __DIR__ . '/includes/header.php';
 ?>
@@ -31,9 +31,9 @@ include __DIR__ . '/includes/header.php';
         </div>
       </div>
       <div class="col-lg-6 d-none d-lg-flex justify-content-end">
-        <div style="width:420px;height:320px;background:rgba(255,107,53,.15);border-radius:var(--radius);display:flex;align-items:center;justify-content:center">
-          <i class="fas fa-bowl-food" style="font-size:8rem;color:var(--hp-orange);opacity:.7"></i>
-        </div>
+        <img src="/assets/img/hero-food.jpg"
+             style="width:420px;height:320px;object-fit:cover;border-radius:var(--radius);box-shadow:0 20px 60px rgba(0,0,0,.35)"
+             alt="منسف أردني">
       </div>
     </div>
   </div>
@@ -111,7 +111,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 // Load categories
 API.get('/api/meals').then(() => {}).catch(() => {});
 

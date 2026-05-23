@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'My Profile';
 include __DIR__ . '/includes/header.php';
 if (!$currentUser) { header('Location: /login.php'); exit; }
@@ -74,7 +74,7 @@ if (!$currentUser) { header('Location: /login.php'); exit; }
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 // Load full profile
 API.get('/api/profile').then(p => {
   if (p.phone) document.getElementById('p-phone').value = p.phone;

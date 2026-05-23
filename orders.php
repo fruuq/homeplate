@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $pageTitle = 'My Orders';
 include __DIR__ . '/includes/header.php';
 if (!$currentUser) { header('Location: /login.php?next=/orders.php'); exit; }
@@ -27,7 +27,7 @@ if (!$currentUser) { header('Location: /login.php?next=/orders.php'); exit; }
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 let currentStatus = '';
 let currentPage   = 1;
 

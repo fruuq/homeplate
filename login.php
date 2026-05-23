@@ -1,4 +1,4 @@
-
+﻿
 
 
 <?php
@@ -55,7 +55,7 @@ include __DIR__ . '/includes/header.php';
 </div>
 
 <?php
-$extraJs = <<<JS
+$extraJs = <<<'JS'
 document.getElementById('login-form').addEventListener('submit', async e => {
   e.preventDefault();
   const err = document.getElementById('form-error');

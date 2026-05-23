@@ -33,7 +33,7 @@
     </div>
     <div class="divider" style="border-top:1px solid rgba(255,255,255,.1);margin-top:2rem"></div>
     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2" style="font-size:.85rem">
-      <span>&copy; 2025 Homeplate. Software Engineering Project.</span>
+      <span>&copy; 2026 Homeplate. Software Engineering Project.</span>
       <span>Supervised by Prof. Amjad Hudaib</span>
     </div>
   </div>
