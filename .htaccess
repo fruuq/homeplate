@@ -1,37 +1,16 @@
-Options -Indexes
-
-# Block direct access to sensitive directories
-<FilesMatch "\.(env|sql|log)$">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
-
 RewriteEngine On
 RewriteBase /
 
-# Route API requests
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^auth/(.*)$           auth/$1.php [L,QSA]
-RewriteRule ^api/meals(.*)$       api/meals.php   [L,QSA]
-RewriteRule ^api/orders(.*)$      api/orders.php  [L,QSA]
-RewriteRule ^api/cooks(.*)$       api/cooks.php   [L,QSA]
-RewriteRule ^api/reviews(.*)$     api/reviews.php [L,QSA]
-RewriteRule ^api/messages(.*)$    api/messages.php [L,QSA]
-RewriteRule ^api/notifications(.*)$ api/notifications.php [L,QSA]
-RewriteRule ^api/favorites(.*)$   api/favorites.php [L,QSA]
-RewriteRule ^api/profile(.*)$     api/profile.php [L,QSA]
-RewriteRule ^api/reports(.*)$     api/reports.php [L,QSA]
-RewriteRule ^api/admin(.*)$       api/admin.php   [L,QSA]
-
-# Block access to PHP files in uploads
-<Directory uploads>
-    <FilesMatch "\.php$">
-        Order allow,deny
-        Deny from all
-    </FilesMatch>
-</Directory>
-
-Header always set X-Content-Type-Options "nosniff"
-Header always set X-Frame-Options "DENY"
-Header always set X-XSS-Protection "1; mode=block"
+RewriteRule ^auth/(.*)$             auth/$1.php             [L,QSA]
+RewriteRule ^api/meals(.*)$         api/meals.php           [L,QSA]
+RewriteRule ^api/orders(.*)$        api/orders.php          [L,QSA]
+RewriteRule ^api/cooks(.*)$         api/cooks.php           [L,QSA]
+RewriteRule ^api/reviews(.*)$       api/reviews.php         [L,QSA]
+RewriteRule ^api/messages(.*)$      api/messages.php        [L,QSA]
+RewriteRule ^api/notifications(.*)$ api/notifications.php   [L,QSA]
+RewriteRule ^api/favorites(.*)$     api/favorites.php       [L,QSA]
+RewriteRule ^api/profile(.*)$       api/profile.php         [L,QSA]
+RewriteRule ^api/reports(.*)$       api/reports.php         [L,QSA]
+RewriteRule ^api/admin(.*)$         api/admin.php           [L,QSA]

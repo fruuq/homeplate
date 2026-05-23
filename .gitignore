@@ -1,0 +1,10 @@
+config/credentials.php
+.env
+uploads/meals/*
+uploads/avatars/*
+uploads/ids/*
+!uploads/meals/.htaccess
+!uploads/avatars/.htaccess
+!uploads/ids/.htaccess
+.claude/
+homeplate_upload.zip

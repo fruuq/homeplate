@@ -2,8 +2,8 @@
 // config/config.php
 
 define('APP_NAME', 'Homeplate');
-define('APP_URL',  'https://yourdomain.com');   // change for production
-define('APP_ENV',  'development');               // 'production' in prod
+define('APP_URL',  $_ENV['APP_URL'] ?? 'https://homeplatesw.page.gd');
+define('APP_ENV',  'production');
 
 // JWT / session
 define('SESSION_LIFETIME', 60 * 60 * 24 * 7);  // 7 days in seconds

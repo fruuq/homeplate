@@ -1,6 +1,6 @@
 <?php
 // includes/header.php
-// Usage: include with $pageTitle and optional $bodyClass set beforehand
+ob_start();
 
 require_once __DIR__ . '/../config/config.php';
 require_once __DIR__ . '/../config/db.php';
@@ -18,6 +18,8 @@ function navActive(string $page): string {
     global $currentPage;
     return $currentPage === $page ? 'active' : '';
 }
+
+ob_clean();
 ?>
 <!DOCTYPE html>
 <html lang="en">
